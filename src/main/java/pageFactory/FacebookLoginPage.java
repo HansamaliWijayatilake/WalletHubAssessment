@@ -50,12 +50,4 @@ public class FacebookLoginPage {
         this.clickLogin();
     }
 
-    public void handleNotificationPopup(){
-        Map<String, Object> prefs = new HashMap<String, Object>();
-        //Pass the argument 1 to allow and 2 to block
-        prefs.put("profile.default_content_setting_values.notifications", 2);
-        ChromeOptions options = new ChromeOptions();
-        options.setExperimentalOption("prefs", prefs);
-        driver = new ChromeDriver(options);
-    }
 }
